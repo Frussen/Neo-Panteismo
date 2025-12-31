@@ -1,0 +1,371 @@
+.ending {
+  
+  position: relative;
+  width: 100%;
+  background-image: url("../images/Cubes.jpg");
+  background-size: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+  h1 {
+    margin: 4.6vw 0.4vw 4.6vw;
+    font-size: 3vw;
+  }
+
+  .image-wrapper {
+
+    position: relative;
+    text-align: center;
+
+    .project {
+      display: block;
+      width: 90vw;
+      margin-bottom: 7vw;
+      border-radius: 1.18vw;
+    }
+
+    span {
+      position: absolute;
+      width: 20vw;
+      font-size: 1.4vw;
+      top: 5.5vw;
+      right: 3vw;
+      color: #333;
+    }
+
+    #odoo {
+      width: 90vw;
+      top: 39.6vw;
+      right: 0;
+      color: white;
+      font-size: 1.7vw;
+    }
+    
+    #BGG {
+      width: 90vw;
+      top: 36.9vw;
+      right: 0;
+      color: white;
+      font-size: 1.7vw;
+    }
+  }
+  
+  .contatti {
+
+    position: relative;
+    display: grid;
+    grid-template:
+    'h3 h3'
+    'Nome Messaggio'
+    'E-mail Messaggio'
+    'Oggetto Invia';
+    justify-items: center;
+    align-items: flex-start;
+    width: 90vw;
+    height: 33.5vw;
+    background-color: hsla(0, 0%, 27%, 0.9);
+    border-radius: 2.08vw 2.08vw 0;
+    margin: 0.7vw 0.4vw 3.7vw 0;
+
+    input[type=text] {
+      width: 40vw;
+      height: 5.2vw;
+      margin: 1vw 1.5vw 0 3.5vw;
+      padding: 0;
+      background-color: #5C5C5C;
+      font-size: 2vw;
+      color: white;
+      border-radius: 0.63vw;
+      border: none;
+      resize: none;
+      
+      &:focus {
+        outline: none;
+      }
+      &.item4 {
+        margin-bottom: 4vw;
+      }
+    }
+
+    textarea {
+      width: 40vw;
+      height: 12.4vw;
+      background-color: #5C5C5C;
+      margin: 1vw 3.5vw 0vw 1.5vw;
+      font-size: 2vw;
+      font-family: sans-serif;
+      color: white;
+      border-radius: 0.63vw;
+      border: none;
+      resize: none;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .item1 {
+      grid-area: h3;
+      justify-self: center;
+      font-size: 3vw;
+      margin: 3.5vw 0 1vw;
+    }
+    .item2 { grid-area: Nome; }
+    .item3 { grid-area: E-mail; }
+    .item4 { grid-area: Oggetto;}
+    .item5 { grid-area: Messaggio;}
+    .item6 {
+      grid-area: Invia;
+      margin: 1.7vw 2vw 0 0;
+      padding: 0;
+      width: 17vw;
+      height: 4.8vw;
+      border-radius: 0.63vw;
+      background-color: #3C86C8;
+      font-size: 2.8vw;
+      font-weight: 700;
+      color: white;
+      border: none;
+
+      &:hover {
+        color: #3C86C8;
+        background-color: hsl(208, 100%, 97%);
+        transition: 0.2s ease-in-out;
+        cursor: pointer;
+      }
+    }
+
+
+    &::after {
+      content: "";
+      display: block;
+      border-top: 2.22vw solid hsla(0, 0%, 27%, 0.9);
+      border-right: 2.22vw solid hsla(0, 0%, 27%, 0.9);
+      border-bottom: 2.22vw solid transparent;
+      border-left: 2.22vw solid transparent;
+      position: absolute;
+      top: 33.5vw;
+      right: 0;
+    }
+  }
+
+  h2 {
+    align-self: center;
+    margin-bottom: 4.7vw;
+    font-size: 2.3vw;
+  }
+
+  .footer {
+    position: relative;
+    width: 83.4vw;
+    height: 4.37vw;
+    display: flex;
+    justify-content: center;
+    background-color: #3C86C8;
+    margin: 0 7vw 3vw 0;
+    border-radius: 0.63vw 0 0 0.63vw;
+
+    .flex-container {
+      width: 60vw;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-left: 4vw;
+      font-size: 1.7vw;
+
+      img {
+        width: 2.7vw;
+        display: block;
+      }
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      border-top: 2.185vw solid transparent;
+      border-right: 2.185vw solid transparent;
+      border-bottom: 2.185vw solid #3C86C8;
+      border-left: 2.185vw solid #3C86C8;
+      position: absolute;
+      left: 83.4vw;
+      bottom: 0;
+    }
+  }
+}
+
+.ending > * {
+  margin-right: 0.4vw;
+  //to center because of the scroll bar at the right
+}
+
+#progetti {
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: 0.3vw;
+  visibility: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Media query for mobile
+@media only screen and (max-width: 769px) {
+  .ending {
+
+    h1 {
+      text-align: center;
+      margin: 11vw 12vw 11vw;
+      font-size: 7.4vw;
+    }
+  
+    .image-wrapper {
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  
+      .project {
+        width: 83vw;
+        margin-bottom: 4vw;
+      }
+  
+      span {
+        position: relative;
+        width: 77vw;
+        font-size: 4.7vw;
+        top: 0;
+        right: 0;
+        color: white;
+        margin-bottom: 11vw;
+      }
+
+      #odoo {
+        top: 0;
+        width: 77vw;
+        font-size: 4.7vw;
+      }
+
+      #BGG {
+        top: 0;
+        width: 77vw;
+        font-size: 4.7vw;
+      }
+    }
+    
+    .contatti {
+
+      grid-template:
+      'h3'
+      'Nome'
+      'E-mail'
+      'Oggetto'
+      'Messaggio'
+      'Invia';
+      width: 80vw;
+      height: auto;
+      border-radius: 8vw;
+      margin: 5vw 0 17vw;
+  
+      input[type=text] {
+        width: 70vw;
+        height: 14vw;
+        margin: 4.5vw 0 0;
+        font-size: 5vw;
+        border-radius: 2vw;
+        
+        &.item4 {
+          margin-bottom: 4.5vw;
+        }
+      }
+  
+      textarea {
+        width: 70vw;
+        height: 60vw;
+        margin: 0;
+        font-size: 5vw;
+        border-radius: 2vw;
+      }
+  
+      .item1 {
+        font-size: 9vw;
+        margin: 9vw 0 2vw;
+      }
+      
+      .item6 {
+        margin: 6vw 0 6vw;
+        padding: 0;
+        width: 50vw;
+        height: 16vw;
+        border-radius: 2vw;
+        font-size: 9vw;
+  
+        &:hover {
+          color: white;
+          background-color: #3C86C8;
+        }
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+
+    h2 {
+      margin: 6vw 0;
+      font-size: 4.7vw;
+    }
+  
+    .footer {
+      width: 80vw;
+      height: auto;
+      margin: 0 0 8vw;
+      border-radius: 2vw;
+      order: 2 3 1 4 5;
+  
+      .flex-container {
+        width: 75vw;
+        flex-wrap: wrap;
+        margin-left: 0;
+        font-size: 6vw;
+        justify-content: center;
+
+        p {
+          text-align: center;
+          margin: 3.7vw 0 3vw;
+        }
+  
+        img {
+          width: 9vw;
+          margin: 0 1.7vw 4vw;
+        }
+      }
+  
+      &::after {
+        display: none;
+      }
+
+      #link { order: 2; }
+      #twtr { order: 3; }
+      #sign { order: 1; }
+      #gitb { order: 4; }
+      #fcbk { order: 5; }
+    }
+  }
+  
+  .ending > * {
+    margin-right: 0;
+  }
+}
